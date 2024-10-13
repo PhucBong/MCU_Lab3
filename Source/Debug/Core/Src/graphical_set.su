@@ -1,0 +1,4 @@
+graphical_set.c:11:6:initNoneColor	8	static
+graphical_set.c:16:6:setRed	8	static
+graphical_set.c:22:6:setYellow	8	static
+graphical_set.c:28:6:setGreen	8	static

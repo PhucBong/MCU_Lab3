@@ -8,3 +8,4 @@
 #include "global.h"
 
 int status = 0;
+int idx = 0;

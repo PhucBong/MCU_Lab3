@@ -23,5 +23,6 @@ void setGreen2(void);
 
 void display7SEG(int index);
 void update7SEG(int index);
+void updateClockBuffer();
 
 #endif /* INC_LED_DISPLAY_H_ */

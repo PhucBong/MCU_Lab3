@@ -6,6 +6,7 @@
  */
 #include "led_display.h"
 
+
 void initColor1(void){
 	HAL_GPIO_WritePin(LED_RED_1_GPIO_Port, LED_RED_1_Pin, SET);
 	HAL_GPIO_WritePin(LED_AMBER_1_GPIO_Port, LED_AMBER_1_Pin, SET);
@@ -142,33 +143,25 @@ void display7SEG(int index){
 			HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
 			break;
 		default:
+			HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
+			HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
+			HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
+			HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
+			HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
+			HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
+			HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
 			break;
 	}
 }
-void update7SEG(int index){
-	switch (index) {
-		case 0:
-			display7SEG(led_buffer[index]);
-			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
-			HAL_GPIO_WritePin(GPIOB, EN1_Pin | EN2_Pin | EN3_Pin, SET);
-			break;
-		case 1:
-			display7SEG(led_buffer[index]);
-			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
-			HAL_GPIO_WritePin(GPIOB, EN0_Pin | EN2_Pin | EN3_Pin, SET);
-			break;
-		case 2:
-			display7SEG(led_buffer[index]);
-			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
-			HAL_GPIO_WritePin(GPIOB, EN0_Pin | EN1_Pin | EN3_Pin, SET);
-			break;
-		case 3:
-			display7SEG(led_buffer[index]);
-			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
-			HAL_GPIO_WritePin(GPIOB, EN0_Pin | EN1_Pin | EN2_Pin, SET);
-			break;
-		default:
-			break;
-	}
+
+void init7SEG(void){
+	HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
+	HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, SET);
+	HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, SET);
+	HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, SET);
+	HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
+	HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, SET);
+	HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, SET);
 }
+
 

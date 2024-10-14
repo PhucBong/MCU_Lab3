@@ -10,7 +10,7 @@
 
 #include "main.h"
 
-extern int led_buffer[4];
+
 
 void initColor1(void);
 void initColor2(void);
@@ -21,8 +21,9 @@ void setAmber2(void);
 void setGreen1(void);
 void setGreen2(void);
 
+void init7SEG(void);
 void display7SEG(int index);
-void update7SEG(int index);
-void updateClockBuffer();
+
+
 
 #endif /* INC_LED_DISPLAY_H_ */

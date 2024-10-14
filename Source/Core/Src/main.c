@@ -26,6 +26,7 @@
 #include "timer.h"
 #include "global.h"
 #include "input_reading.h"
+#include "led_display.h"
 
 /* USER CODE END Includes */
 
@@ -98,8 +99,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  sw_led = 0;
+  c_1s = 100;
+  counter1 = 5, counter2 = 3;
   status = INIT;
   idx = 0;
+  setTimer(2, 100);
   while (1)
   {
 	 fsm_for_input_processing();

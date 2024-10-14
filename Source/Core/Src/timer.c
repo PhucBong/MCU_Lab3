@@ -18,20 +18,20 @@ void setTimer(int num, int duration){
 }
 
 void timerRun(void){
-//	for(int i = 0; i < 10; i++){
-//		if (timer_counter[i] > 0){
-//			timer_counter[i]--;
-//			if(timer_counter[i] <= 0){
-//				timer_flag[i] = 1;
-//			}
-//		}
-//	}
-	if (timer_counter[1] > 0){
-		timer_counter[1]--;
-		if(timer_counter[1] <= 0){
-			timer_flag[1] = 1;
+	for(int i = 0; i < 10; i++){
+		if (timer_counter[i] > 0){
+			timer_counter[i]--;
+			if(timer_counter[i] <= 0){
+				timer_flag[i] = 1;
+			}
 		}
 	}
+//	if (timer_counter[1] > 0){
+//		timer_counter[1]--;
+//		if(timer_counter[1] <= 0){
+//			timer_flag[1] = 1;
+//		}
+//	}
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){

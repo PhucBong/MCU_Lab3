@@ -7,5 +7,20 @@
 
 #include "global.h"
 
-int status = 0;
-int idx = 0;
+int mode = 1;
+int redValue, amberValue, greenValue;
+int redNew, amberNew, greenNew;
+
+void initLedTime(){
+	redValue = RED_INIT;
+	amberValue = AMBER_INIT;
+	greenValue = GREEN_INIT;
+	redNew = redValue;
+	amberNew = amberValue;
+	greenNew = greenValue;
+}
+
+// ????
+int getMode(){
+	return mode;
+}

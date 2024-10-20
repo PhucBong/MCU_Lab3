@@ -7,14 +7,16 @@
 
 #ifndef INC_INPUT_PROCESSING_H_
 #define INC_INPUT_PROCESSING_H_
+#include "main.h"
+#include "input_reading.h"
+#include "global.h"
+#include "led_display.h"
+#include "timer.h"
 
-extern int cnt;
-extern int counter1[3];
-extern int counter2[3];
-extern int sw_led;
-enum Color {RED, GREEN, AMBER}; // 0 RED, 1 GREEN, 2 AMBER
 
+
+void fsm_automatic_run();
 void fsm_for_input_processing(void);
-void fsm_automatic_run(void);
+
 
 #endif /* INC_INPUT_PROCESSING_H_ */

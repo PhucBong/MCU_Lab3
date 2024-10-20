@@ -9,7 +9,8 @@
 #define INC_LED_DISPLAY_H_
 
 #include "main.h"
-
+#include "timer.h"
+#include "global.h"
 
 
 void initColor1(void);
@@ -24,6 +25,9 @@ void setGreen2(void);
 void init7SEG(void);
 void display7SEG(int index);
 
+void resetCountValue();
+void ledDispMode();
+void ledScanning();
 
 
 #endif /* INC_LED_DISPLAY_H_ */

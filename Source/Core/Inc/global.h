@@ -14,8 +14,14 @@
 #define AUTO_GREEN_RED 	3
 #define AUTO_AMBER_RED 	4
 
-extern int status;
-extern int idx;
+#define RED_INIT 		30
+#define AMBER_INIT		5
+#define GREEN_INIT 		25
+
+void initLedTime();
+extern int mode;
+extern int redValue, amberValue, greenValue;
+extern int redNew, amberNew, greenNew;
 
 
 #endif /* INC_GLOBAL_H_ */

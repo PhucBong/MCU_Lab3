@@ -1,2 +1,2 @@
-input_processing.c:20:6:fsm_for_input_processing	8	static
-input_processing.c:61:6:fsm_automatic_run	8	static
+input_processing.c:16:6:fsm_for_input_processing	8	static
+input_processing.c:47:6:fsm_automatic_run	8	static

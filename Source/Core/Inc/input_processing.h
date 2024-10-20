@@ -8,8 +8,11 @@
 #ifndef INC_INPUT_PROCESSING_H_
 #define INC_INPUT_PROCESSING_H_
 
-extern int counter1, counter2, c_1s;
+extern int cnt;
+extern int counter1[3];
+extern int counter2[3];
 extern int sw_led;
+enum Color {RED, GREEN, AMBER}; // 0 RED, 1 GREEN, 2 AMBER
 
 void fsm_for_input_processing(void);
 void fsm_automatic_run(void);

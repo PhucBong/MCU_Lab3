@@ -100,11 +100,19 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   sw_led = 0;
-  c_1s = 100;
-  counter1 = 5, counter2 = 3;
-  status = INIT;
+  cnt = 3;
+  counter1[RED] = 5;
+  counter1[GREEN] = 3;
+  counter1[AMBER] = 2;
+
+  counter2[RED] = 5;
+  counter2[GREEN] = 3;
+  counter2[AMBER] = 2;
+  status = AUTO_RED_GREEN;
   idx = 0;
-  setTimer(2, 100);
+  setTimer(1, 10);
+  setTimer(2, 15);
+  //setTimer(3, 20);
   while (1)
   {
 	 fsm_for_input_processing();

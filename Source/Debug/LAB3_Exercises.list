@@ -896,7 +896,7 @@ void button_reading(void){
  8000678:	4a28      	ldr	r2, [pc, #160]	; (800071c <button_reading+0x164>)
  800067a:	687b      	ldr	r3, [r7, #4]
  800067c:	f832 3013 	ldrh.w	r3, [r2, r3, lsl #1]
- 8000680:	2b31      	cmp	r3, #49	; 0x31
+ 8000680:	2b09      	cmp	r3, #9
  8000682:	d82e      	bhi.n	80006e2 <button_reading+0x12a>
 					counterForButtonHeld[i]++;
  8000684:	4a25      	ldr	r2, [pc, #148]	; (800071c <button_reading+0x164>)
@@ -911,7 +911,7 @@ void button_reading(void){
  8000698:	4a20      	ldr	r2, [pc, #128]	; (800071c <button_reading+0x164>)
  800069a:	687b      	ldr	r3, [r7, #4]
  800069c:	f832 3013 	ldrh.w	r3, [r2, r3, lsl #1]
- 80006a0:	2b31      	cmp	r3, #49	; 0x31
+ 80006a0:	2b09      	cmp	r3, #9
  80006a2:	d91e      	bls.n	80006e2 <button_reading+0x12a>
 						flagForButtonHeld[i] = 1;
  80006a4:	4a1e      	ldr	r2, [pc, #120]	; (8000720 <button_reading+0x168>)

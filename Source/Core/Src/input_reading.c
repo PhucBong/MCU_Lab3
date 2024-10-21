@@ -8,7 +8,7 @@
 #include "main.h"
 # define NO_OF_BUTTONS 					3
 
-#define DURATION_FOR_HOLD				50
+#define DURATION_FOR_HOLD				10
 #define DURATION_FOR_AUTO_INCREASING 	100
 #define BUTTON_IS_PRESSED				GPIO_PIN_RESET
 #define BUTTON_IS_RELEASED				GPIO_PIN_SET

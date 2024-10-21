@@ -195,7 +195,7 @@ enum Color state1 = RED;
 enum Color state2 = GREEN;
 
 
-// ???????
+
 void resetCountValue(){
 	cnt1 = redValue;
 	cnt2 = greenValue;
@@ -248,7 +248,7 @@ void normalMode(){
 			break;
 		case GREEN:
 			setGreen2();
-			if(cnt2 < 0){
+			if(cnt2 <= 0){
 				cnt2 = amberValue;
 				state2 = AMBER;
 			}
@@ -301,25 +301,28 @@ void ledDispMode(){
 	switch (mode) {
 		case 1:
 			if(timer_flag[0] == 1){
-				setTimer(0, 200);
+				setTimer(0, 1000);
 				normalMode();
 			}
 			break;
 		case 2:
 			if(timer_flag[0] == 1){
-				setTimer(0, 1000);
+				setTimer(0, 250);
 				toggleRed();
 			}
+			break;
 		case 3:
 			if(timer_flag[0] == 1){
-				setTimer(0, 2000);
+				setTimer(0, 250);
 				toggleAmber();
 			}
+			break;
 		case 4:
 			if(timer_flag[0] == 1){
-				setTimer(0, 2000);
+				setTimer(0, 250);
 				toggleGreen();
 			}
+			break;
 		default:
 			break;
 	}

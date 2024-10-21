@@ -20,7 +20,3 @@ void initLedTime(){
 	greenNew = greenValue;
 }
 
-// ????
-int getMode(){
-	return mode;
-}

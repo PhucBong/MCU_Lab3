@@ -100,13 +100,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+  initButton();
   initLedTime();
   setTimer(0, 10);
-  setTimer(2, 20);
+  setTimer(1, 20);
   while (1)
   {
 	 fsm_for_input_processing();
-
 	 fsm_automatic_run();
     /* USER CODE END WHILE */
 

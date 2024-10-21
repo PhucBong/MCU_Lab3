@@ -16,4 +16,4 @@ led_display.c:206:6:normalMode	8	static
 led_display.c:261:12:get7SEG1Value	4	static
 led_display.c:280:12:get7SEG2Value	4	static
 led_display.c:300:6:ledDispMode	8	static
-led_display.c:328:6:ledScanning	8	static
+led_display.c:331:6:ledScanning	8	static
